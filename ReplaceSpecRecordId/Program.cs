@@ -171,11 +171,13 @@ namespace ReplaceSpecRecordId
                                 string outcome = datacontrol("", objId, findsplit[0], findsplit[1], replacesplit[1]);
                                 if (outcome.Equals("replacedid")) break;
                             }
-                            currentsetup += findstr + " ---> " + replacestr + "\r\n\r\n";
+
                         }
                         else
+                        {
                             Helper.oEditor.WriteMessage("\r\nfind/replace " + i + ": Spec: " + findsplit[0] + "not Equals: " + replacesplit[0]);
-
+                        }
+                        currentsetup += findstr + " ---> " + replacestr + "\r\n\r\n";
                     }
                 }
             }
